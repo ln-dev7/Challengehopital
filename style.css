@@ -1,0 +1,516 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: inherit;
+}
+
+.nav-bar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  background: linear-gradient(#31bd6b60, white);
+}
+
+/* rgb(15, 147, 223) #31bd6b60*/
+/* Haut de Pge */
+.header li {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.1em;
+  display: inline;
+}
+.header li a {
+  display: inline-block;
+  color: #0d9292;
+  text-align: center;
+  padding: 1.5em;
+  transition: background-color 1.5s;
+}
+.header li a:hover {
+  background-color: white;
+  text-decoration: underline;
+}
+
+/* Le logo*/
+.logo img:hover {
+  transform: rotateY(360deg);
+  transition: 2s;
+}
+
+/* Menu de Navigation */
+.menu li {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.1em;
+  display: inline;
+}
+.menu li a {
+  display: inline-block;
+  color: #0d9292;
+  text-align: center;
+  padding: 1.5em;
+  transition: background-color 1.5s;
+}
+
+.menu li a:hover, .dropdown:hover .dropbtn {
+  background-color: white;
+}
+
+.menu .dropdown {
+  display: inline-block;
+}
+.menu .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+}
+.menu .dropdown-content a {
+  color: #0d9292;
+  padding: 1em 1em;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  transition: color 1.5s, background-color 1.5s;
+  cursor: pointer;
+}
+
+/* Le mini scroll sur le bouton 'Application' */
+.dropbtn span {
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.dropbtn span:after {
+  content: "»";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.dropbtn:hover span {
+  padding-right: 25px;
+}
+
+.dropbtn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/**/
+.menu .dropdown-content a:hover {
+  color: white;
+  background: #31bd6b60;
+}
+
+.menu .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Banner*/
+.banner {
+  display: flex;
+  justify-content: space-around;
+  background: linear-gradient(white);
+}
+
+.banner a[href="#appointment"] {
+  color: white;
+  background-color: #0f93df;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  border-radius: 5px;
+  border-style: none;
+  padding: 1em;
+  transition: color 1s, background-color 1s, box-shadow 1s;
+}
+.banner a[href="#appointment"]:hover {
+  background-color: red;
+  color: white;
+  box-shadow: 0px 3px 3px 3px rgba(13, 146, 146, 0.3);
+}
+
+.banner-content {
+  line-height: 50px;
+  margin-top: 50px;
+}
+
+/* Le soulignement au hover */
+.banner-content h1 a {
+  color: #0f93df;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background: linear-gradient(to top, red 0%, red 4px, transparent 5px) no-repeat;
+  background-size: 0 100%;
+  transition: background-size 0.3s, color 1s;
+}
+.banner-content h1 a:hover {
+  background: linear-gradient(to top, #0f93df 0%, #0f93df 4px, transparent 5px) no-repeat;
+  background-size: 100% 100%;
+  color: red;
+}
+
+/**/
+h3, p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #0f93df;
+}
+
+/* Section : class="infos" */
+.infos {
+  display: flex;
+  justify-content: space-around;
+  background-color: #f9f9f9;
+  border-radius: 20px;
+  width: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+  margin: 30px;
+  padding: 30px;
+  transition: transform 1.5s;
+}
+.infos:hover {
+  cursor: pointer;
+  transform: scale(1.03);
+}
+
+/* Classe : services */
+.services__header {
+  color: #0f93df;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background: linear-gradient(to top, red 0%, red 4px, transparent 5px) no-repeat;
+  background-size: 100% 100%;
+  margin: 20px;
+}
+.services h3 {
+  color: #2d607e;
+  padding-bottom: 5px;
+}
+.services__content {
+  display: flex;
+  margin: 20px;
+}
+.services__content__card {
+  transition: background-color 1s, transform 1s;
+}
+.services__content__card:hover {
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transform: scale(1.025);
+}
+.services__content hr {
+  padding-right: 5px;
+  background-color: rgba(39, 85, 49, 0.377);
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.services__content h4 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-decoration: underline;
+  margin-bottom: 3px;
+}
+
+/* a propos */
+#about {
+  margin: 50px;
+  display: flex;
+  justify-content: space-around;
+}
+#about h3 {
+  text-decoration: underline;
+  text-decoration-color: red;
+}
+#about .about-contents {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+}
+#about .about-contents .about-content {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Class : appointment */
+#appointment {
+  display: flex;
+  justify-content: space-around;
+  background: linear-gradient(white, #0ddfe615);
+}
+#appointment .rdv {
+  background-color: #0ddfe60a;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  height: 500px;
+  transition: transform 1s;
+}
+#appointment .rdv:hover {
+  transform: scale(1.02);
+}
+#appointment h1 {
+  color: #0f93df;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background: linear-gradient(to top, red 0%, red 4px, transparent 5px) no-repeat;
+  background-size: 0 100%;
+  transition: background-size 0.3s, color 1s;
+}
+#appointment h1:hover {
+  background: linear-gradient(to top, #0f93df 0%, #0f93df 4px, transparent 5px) no-repeat;
+  background-size: 100% 100%;
+  color: red;
+  cursor: pointer;
+}
+#appointment .form {
+  display: flex;
+  flex-direction: column;
+}
+#appointment .form input, #appointment .form button {
+  border: 2px solid #0f93df;
+  border-radius: 50px;
+  color: #0f93df;
+  margin-bottom: 30px;
+  padding: 5px;
+  outline: none;
+  transition: border 1s, background-color 1s;
+}
+#appointment .form input:focus, #appointment .form button:focus {
+  border: 2px solid greenyellow;
+  background-color: #0f93df;
+  color: white;
+}
+#appointment .form button {
+  border: 2px solid red;
+  background-color: #0f93df;
+  color: white;
+}
+#appointment .form button:hover {
+  cursor: pointer;
+  background-color: rgba(15, 147, 223, 0.3);
+}
+
+/* Televharger l'application */
+#application {
+  background: linear-gradient(#04f7ff15, white);
+  display: flex;
+  justify-content: space-between;
+}
+#application .app {
+  margin-top: 200px;
+  background: linear-gradient(#04f7ff15, white);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  height: 250px;
+  transition: transform 1s, background-color 1.5s;
+}
+#application .app:hover {
+  background: linear-gradient(white, #04f7ff15);
+  transform: scale(1.005);
+}
+#application .app p {
+  padding: 10px;
+}
+#application .app h3 {
+  padding: 10px;
+}
+#application .app .download {
+  padding: 30px;
+}
+#application .app .download a {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  border: 2px solid white;
+  border-radius: 50px;
+  background-color: #07a2ad;
+  color: white;
+  padding: 15px;
+  margin-bottom: 50px;
+  outline: none;
+  transition: border 1s, background-color 1s;
+}
+#application .app .download a:hover {
+  border: 2px solid red;
+  background-color: rgba(7, 162, 173, 0.4);
+  color: red;
+}
+
+/* Medecins */
+#doctors h1 {
+  color: #0f93df;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background: linear-gradient(to top, red 0%, red 4px, transparent 5px) no-repeat;
+  background-size: 100% 100%;
+  margin: 20px;
+}
+#doctors .doc {
+  display: flex;
+  margin: 15px;
+}
+#doctors .doc hr {
+  padding: 2px;
+  background-color: #f9f9f9;
+}
+#doctors .doc img {
+  width: 50%;
+  margin-left: 25%;
+  transition: transform 1s;
+}
+#doctors .doc img:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+#doctors .doc .doc-text {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: rgba(30, 114, 114, 0.322);
+  text-align: center;
+  padding: 15px;
+  transition: background-color 1s, color 1s;
+}
+#doctors .doc .doc-text:hover {
+  background-color: rgba(30, 114, 114, 0.7);
+  color: white;
+  cursor: pointer;
+}
+
+/* Articles de blog */
+#news {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background: linear-gradient(white, #04f7ff15, white);
+}
+#news h1 {
+  color: #0f93df;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background: linear-gradient(to top, red 0%, red 4px, transparent 5px) no-repeat;
+  background-size: 100% 100%;
+  margin: 20px;
+}
+#news .news-contents {
+  margin: 20px auto;
+  width: 640px;
+  display: flex;
+  overflow: hidden;
+}
+#news .news-contents .news-content {
+  width: calc(640px * 3);
+  animation: souplex 10s infinite;
+}
+@keyframes souplex {
+  0% {
+    transform: translateX(0);
+  }
+  10% {
+    transform: translateX(0);
+  }
+  33% {
+    transform: translateX(-640px);
+  }
+  43% {
+    transform: translateX(-640px);
+  }
+  66% {
+    transform: translateX(-1280px);
+  }
+  76% {
+    transform: translateX(-1280px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+#news .news-contents .news-card-img {
+  background-color: #74eafa7e;
+  text-align: center;
+}
+#news .news-contents .news-card-text {
+  background-color: #74eafa7e;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Contact */
+#contact {
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  justify-content: center;
+  padding: 10px;
+}
+#contact .form {
+  display: flex;
+  flex-direction: column;
+}
+#contact input, #contact button, #contact #appointment .form button, #appointment .form #contact button, #contact textarea {
+  border: 2px solid #0f93df;
+  border-radius: 50px;
+  color: #0f93df;
+  margin-bottom: 30px;
+  padding: 5px;
+  outline: none;
+  transition: border 1s, background-color 1s;
+}
+#contact input:focus, #contact button:focus, #contact textarea:focus {
+  border: 2px solid greenyellow;
+  background-color: #0f93df;
+  color: white;
+}
+#contact button {
+  border: 2px solid red;
+  background-color: #0f93df;
+  color: white;
+}
+#contact button:hover {
+  cursor: pointer;
+  background-color: rgba(15, 147, 223, 0.3);
+}
+
+/* Footer */
+.hr {
+  padding: 2px;
+  margin: 5px;
+  background-color: #f9f9f9;
+}
+
+footer {
+  color: #0f93df;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  display: flex;
+  justify-content: space-around;
+  background: linear-gradient(to left, #04f7ff15, white, #04f7ff15, white, #04f7ff15, white);
+}
+
+.corp {
+  display: flex;
+  justify-content: space-around;
+  padding: 5px;
+  color: #0f93df;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.pourcentage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1cm;
+  margin-left: 12cm;
+  background-color: rgba(0, 0, 255, 0.404);
+  border: 1px solid #ffffff;
+  width: 15cm;
+  border-radius: 10px;
+}
+.testimony {
+  justify-content: space-between;
+  display: flex;
+  width:18cm;
+  margin-left:5cm;
+  font-size:1.2em;
+}
+
+/*# sourceMappingURL=style.css.map */
